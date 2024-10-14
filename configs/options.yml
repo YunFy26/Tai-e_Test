@@ -1,0 +1,35 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath :
+#  - WebGoat/BOOT-INF/lib
+  - project/BOOT-INF/lib
+
+# appClass
+# 路径设置为project/BOOT-INF/classes时存在bug
+appClassPath: [project/BOOT-INF/classes]
+
+# 如果指定包名目录则不会
+#appClassPath: [project/BOOT-INF/classes/org/example/springtest]
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  ir-dumper: ;
+#
+
+
+
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL
